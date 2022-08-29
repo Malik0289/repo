@@ -26,13 +26,13 @@ WHERE (year = 2013 AND month = 1);
 
 SELECT COUNT(tailnum) FROM flights;	#  334,264
 SELECT COUNT(*) FROM flights
-	WHERE tailnum IS NOT NULL;			#  334,264
+WHERE tailnum IS NOT NULL;		#  334,264
 SELECT COUNT(*) FROM flights
-	WHERE tailnum IS NULL;				#  2,512
+WHERE tailnum IS NULL;			#  2,512
 
 SELECT COUNT(*) AS 'Number of Flights', SUM(distance) AS 'Total Distance' FROM flights
-	WHERE (year = 2013 AND month = 1)
-    AND tailnum IS NULL;
+WHERE (year = 2013 AND month = 1)
+AND tailnum IS NULL;
 
 # 3. What is the total distance flown for all planes on July 5, 2013 grouped by aircraft manufacturer? 
 # Write this statement first using an INNER JOIN, then using a LEFT OUTER JOIN. How do your results compare?
